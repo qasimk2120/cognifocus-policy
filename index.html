@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – CogniFocus</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-bg: #0f1117;
+      --color-surface: #1a1d27;
+      --color-border: #2a2d3a;
+      --color-accent: #6c63ff;
+      --color-accent-light: #8b85ff;
+      --color-text-primary: #e8e9f0;
+      --color-text-secondary: #9a9bb0;
+      --color-text-muted: #5c5e72;
+      --color-success: #3ecf8e;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+      --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%);
+      border-bottom: 1px solid var(--color-border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(108, 99, 255, 0.12);
+      border: 1px solid rgba(108, 99, 255, 0.3);
+      border-radius: 100px;
+      color: var(--color-accent-light);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    .badge::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    header h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--color-text-primary);
+      margin-bottom: 10px;
+    }
+
+    header h1 span {
+      color: var(--color-accent-light);
+    }
+
+    .subtitle {
+      color: var(--color-text-secondary);
+      font-size: 15px;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Section cards ── */
+    .section {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s ease;
+    }
+
+    .section:hover {
+      border-color: rgba(108, 99, 255, 0.35);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: var(--radius-md);
+      background: rgba(108, 99, 255, 0.12);
+      border: 1px solid rgba(108, 99, 255, 0.2);
+      font-size: 18px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      letter-spacing: -0.2px;
+    }
+
+    .section p {
+      color: var(--color-text-secondary);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .section p + p {
+      margin-top: 12px;
+    }
+
+    /* ── Highlight block ── */
+    .highlight {
+      border-left: 3px solid var(--color-accent);
+      background: rgba(108, 99, 255, 0.06);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(62, 207, 142, 0.06);
+      border: 1px solid rgba(62, 207, 142, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-top: 8px;
+    }
+
+    .contact-card .icon {
+      background: rgba(62, 207, 142, 0.12);
+      border-color: rgba(62, 207, 142, 0.25);
+      font-size: 20px;
+    }
+
+    .contact-card a {
+      color: var(--color-success);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      word-break: break-all;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-card p {
+      color: var(--color-text-muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: 28px 24px;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--color-accent-light);
+    }
+
+    @media (max-width: 480px) {
+      .section {
+        padding: 24px 20px;
+      }
+
+      .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Legal &amp; Privacy</div>
+    <h1>Privacy Policy<br /><span>CogniFocus</span></h1>
+    <p class="subtitle">Last updated: 2026</p>
+  </header>
+
+  <main>
+
+    <!-- Overview -->
+    <div class="section highlight">
+      <div class="section-header">
+        <div class="icon">🧠</div>
+        <h2>About CogniFocus</h2>
+      </div>
+      <p>
+        CogniFocus is a productivity application designed to help users focus on tasks
+        and manage work sessions efficiently.
+      </p>
+      <p>
+        We are committed to protecting your privacy. This policy explains what data we
+        handle, how it is stored, and the measures we take to keep it safe.
+      </p>
+    </div>
+
+    <!-- Information Collection -->
+    <div class="section">
+      <div class="section-header">
+        <div class="icon">🔍</div>
+        <h2>Information Collection and Use</h2>
+      </div>
+      <p>
+        CogniFocus does <strong>not</strong> collect personally identifiable information
+        such as names, email addresses, or location data.
+      </p>
+      <p>
+        The app may collect anonymous usage data — such as session activity or app
+        performance information — solely to help improve the application and provide a
+        better user experience.
+      </p>
+    </div>
+
+    <!-- Local Data Storage -->
+    <div class="section">
+      <div class="section-header">
+        <div class="icon">💾</div>
+        <h2>Local Data Storage</h2>
+      </div>
+      <p>
+        Any timer sessions or productivity data created within the app are stored
+        <strong>locally on your device</strong>. This data is never transmitted to
+        external servers.
+      </p>
+    </div>
+
+    <!-- Third-Party Services -->
+    <div class="section">
+      <div class="section-header">
+        <div class="icon">🔗</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>
+        CogniFocus may use third-party services such as analytics or crash reporting
+        tools to improve stability and performance. These services may collect anonymous
+        technical data such as device type or app usage statistics.
+      </p>
+      <p>
+        We only partner with services that adhere to responsible data practices and do
+        not use this data to identify individual users.
+      </p>
+    </div>
+
+    <!-- Data Security -->
+    <div class="section">
+      <div class="section-header">
+        <div class="icon">🔒</div>
+        <h2>Data Security</h2>
+      </div>
+      <p>
+        We value your privacy and take reasonable technical and organisational measures
+        to protect any information associated with the app. Because most data remains
+        on-device, your personal information is never exposed to our servers.
+      </p>
+    </div>
+
+    <!-- Changes -->
+    <div class="section">
+      <div class="section-header">
+        <div class="icon">📋</div>
+        <h2>Changes to This Privacy Policy</h2>
+      </div>
+      <p>
+        This privacy policy may be updated from time to time to reflect changes in our
+        practices or for other operational, legal, or regulatory reasons. Updates will
+        be posted on this page along with a revised "Last updated" date.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <div class="section-header">
+        <div class="icon">✉️</div>
+        <h2>Contact</h2>
+      </div>
+      <p style="margin-bottom: 16px;">
+        If you have any questions or concerns about this privacy policy, please reach
+        out to us:
+      </p>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div>
+          <a href="mailto:cognielevate@gmail.com">cognielevate@gmail.com</a>
+          <p>We aim to respond within 2–3 business days.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CogniFocus. All rights reserved.</p>
+    <p style="margin-top: 6px;">
+      <a href="mailto:cognielevate@gmail.com">cognielevate@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
